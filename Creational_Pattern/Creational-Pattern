@@ -1,0 +1,26 @@
+There are five main creational patterns:
+
+1️⃣ Singleton – Ensures only one instance of a class exists (e.g., Database connection).
+2️⃣ Factory Method – A method that creates objects without specifying the exact class (e.g., Creating different types of notifications: Email, SMS).
+3️⃣ Abstract Factory – A factory that creates other factories (e.g., UI Toolkit for Windows & Mac).
+4️⃣ Builder – Step-by-step object construction (e.g., Making a Burger 🍔 with layers).
+5️⃣ Prototype – Cloning an object instead of creating a new one from scratch.
+
+
+✅ What is Singleton?
+
+A Singleton ensures that only one instance of a class exists and provides a global access point to that instance.
+🔥 Why Use Singleton?
+
+    Prevents multiple instances (e.g., Database connections, Logger, Configuration Manager).
+    Saves resources by reusing a single instance.
+    Provides controlled access to a shared resource.
+
+🏗 How Singleton Works?
+
+1️⃣ Restrict Object Creation – Ensure only one instance is created.
+2️⃣ Store the Instance – Keep a reference so future calls return the same object.
+3️⃣ Provide Global Access – Any part of the code can access this instance.
+
+
+
