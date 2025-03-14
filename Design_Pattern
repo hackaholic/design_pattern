@@ -1,0 +1,29 @@
+🚀 Step 1: What Are Design Patterns?
+
+📌 Definition:
+Design patterns are proven solutions to common software design problems. They aren’t code snippets but templates that help solve problems efficiently and cleanly.
+
+✅ Why Use Design Patterns?
+
+    Avoid reinventing the wheel – Solve common problems with reusable solutions.
+    Improve code maintainability – Clean, modular, and scalable code.
+    Make code flexible – Patterns allow easy modifications in the future.
+    Better communication – Instead of explaining logic, you can just say, "Use Singleton" or "This is an Observer."
+
+
+# 🚀 Step 2: Categories of Design Patterns
+
+Design patterns are divided into **3 major types**:
+
+| Type         | Purpose                          |
+|-------------|----------------------------------|
+| **Creational**  | How objects are created        |
+| **Structural**  | How objects are arranged & related |
+| **Behavioral**  | How objects interact & communicate |
+
+🔹 **Creational Patterns** → Focus on **object creation.**  
+🔹 **Structural Patterns** → Focus on **organizing objects.**  
+🔹 **Behavioral Patterns** → Focus on **communication between objects.**  
+
+
+
