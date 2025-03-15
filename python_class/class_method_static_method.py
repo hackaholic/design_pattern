@@ -1,8 +1,13 @@
 class MathOperations:
     class_var = 10
 
+    """
+    cls is just a convention—you can use any name you like for that first parameter. However, 
+    cls is the widely accepted convention in Python for referring to the class in class methods, 
+    similar to how self is the convention for referring to the instance in instance methods.
+    """
     @classmethod    # @classmethod modifies class-level data.
-    def class_method(cls) -> int:
+    def class_method(cls) -> int:   
         return cls.class_var
 
     @staticmethod  #@staticmethod is independent of instance/class.
