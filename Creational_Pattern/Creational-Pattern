@@ -23,4 +23,20 @@ A Singleton ensures that only one instance of a class exists and provides a glob
 3️⃣ Provide Global Access – Any part of the code can access this instance.
 
 
+✅ What is Factory Pattern?
 
+The Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass, 
+but allows subclasses to alter the type of objects that will be created.
+✅ Encapsulates object creation logic
+✅ Easy to maintain and modify
+
+The factory method is typically a @staticmethod or @classmethod inside the factory class. 
+It decides which object to return based on the input parameters.
+
+
+🚀 Conclusion
+
+    Factories decouple object creation from usage.
+    Different factory implementations serve different needs.
+    Use dynamic registration when working with scalable applications.
+    The Factory Method Pattern is best suited for large applications with subclassing.
