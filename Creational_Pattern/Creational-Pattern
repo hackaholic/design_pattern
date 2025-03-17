@@ -40,3 +40,14 @@ It decides which object to return based on the input parameters.
     Different factory implementations serve different needs.
     Use dynamic registration when working with scalable applications.
     The Factory Method Pattern is best suited for large applications with subclassing.
+
+
+✅ What is Abstract Factory?
+
+The Abstract Factory is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. 
+It is like a "factory of factories."
+
+🔥 Real World Example:
+Think of a furniture store. You have multiple product categories (chairs, tables, sofas), 
+and each type may have different designs for different regions (modern, classical). 
+The abstract factory will give you a set of methods to create these related objects, but you don’t need to know how they are created internally.
