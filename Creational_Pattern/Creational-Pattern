@@ -51,3 +51,17 @@ It is like a "factory of factories."
 Think of a furniture store. You have multiple product categories (chairs, tables, sofas), 
 and each type may have different designs for different regions (modern, classical). 
 The abstract factory will give you a set of methods to create these related objects, but you don’t need to know how they are created internally.
+
+
+✅ What is Builder Pattern?
+
+The Builder Pattern is a creational design pattern used to construct complex objects step by step. 
+Instead of having a large constructor with multiple parameters, the Builder pattern provides a flexible and readable way to create objects.
+
+🔥 Why Use Builder Pattern?
+
+    Improves Readability – No need for large constructors with too many parameters.
+    Step-by-Step Construction – Can create objects with optional and default values easily.
+    Immutability – Helps in making objects immutable after creation.
+    Prevents Telescoping Constructor – Avoids multiple overloaded constructors
+
