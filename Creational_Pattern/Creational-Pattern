@@ -7,7 +7,7 @@ There are five main creational patterns:
 5️⃣ Prototype – Cloning an object instead of creating a new one from scratch.
 
 
-✅ What is Singleton?
+✅ What is Singleton Pattern?
 
 A Singleton ensures that only one instance of a class exists and provides a global access point to that instance.
 🔥 Why Use Singleton?
@@ -65,3 +65,12 @@ Instead of having a large constructor with multiple parameters, the Builder patt
     Immutability – Helps in making objects immutable after creation.
     Prevents Telescoping Constructor – Avoids multiple overloaded constructors
 
+
+✅ What is Prototype Pattern?
+
+The Prototype Pattern is used to create new objects by cloning an existing object, instead of building from scratch. This helps when object creation is expensive.
+🔥 Why Use Prototype Pattern?
+
+✔ Faster object creation – Avoids costly instantiation.
+✔ Useful for large or complex objects – Cloning is quicker than constructing.
+✔ Reduces code duplication – You don’t need to repeat initialization logic.
