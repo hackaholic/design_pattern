@@ -18,6 +18,40 @@ class MathOperations:
 print(f"MathOperations.class_var: {MathOperations.class_var}")
 print(f"MathOperations.static_method(2, 3): {MathOperations.static_method(2, 3)}")
 
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    @classmethod
+    def from_diameter(cls, diameter):
+        return cls(diameter / 2)
+    
+    """
+    # @staticmethod is fixed to Circle, @classmethod is dynamic:
+    @staticmethod
+    def from_diameter(diameter):              
+        return Circle(diameter / 2)
+
+    
+    class Sphere(Circle):
+        pass
+
+
+    s = Sphere.from_diameter(10)
+    print(type(s))  # Output: <class '__main__.Circle'> (not Sphere!)
+    Even though from_diameter is called on Sphere, it still creates a Circle instance.
+    """
+
+
+c1 = Circle(10)  # Normal constructor
+c2 = Circle.from_diameter(20)  # Using class method as an alternate constructor
+
+print(f"c1 radius: {c1.radius}")  
+print(f"c2 radius (from diameter): {c2.radius}")  
+
+
+
 """
 cls in class methods is a reference to the class (not an instance), and you can use it to access or modify class-level attributes and methods.
 
