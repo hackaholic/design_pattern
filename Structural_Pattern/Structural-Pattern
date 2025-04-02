@@ -1,0 +1,12 @@
+Structural design patterns help organize classes and objects to form larger, more efficient, scalable, and flexible structures.
+
+Here’s the list of Structural Patterns:
+
+1️⃣ Adapter – Converts one interface into another.
+2️⃣ Bridge – Separates abstraction from implementation.
+3️⃣ Composite – Treats individual objects and compositions uniformly.
+4️⃣ Decorator – Adds behavior dynamically to objects.
+5️⃣ Facade – Provides a simplified interface to a complex system.
+6️⃣ Flyweight – Shares objects to reduce memory usage.
+7️⃣ Proxy – Acts as a substitute or intermediary for another object.
+
