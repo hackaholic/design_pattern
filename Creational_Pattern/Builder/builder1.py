@@ -41,3 +41,10 @@ print(car1)
 
 car2 = CarBuilder().set_brand("BMW").set_engine("Diesel").build()
 print(car2)
+
+
+"""
+Solid Principle:
+Builder → Single Responsibility Principle (SRP)
+✅ Separates object construction logic from the object itself, keeping responsibilities clear.
+"""

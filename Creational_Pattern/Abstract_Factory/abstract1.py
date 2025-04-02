@@ -75,3 +75,9 @@ claassic_factory = ClassicFurniture()
 create_furniture(modern_factory)
 create_furniture(claassic_factory)
 
+"""
+Solid Principle:
+Abstract Factory → Dependency Inversion Principle (DIP)
+✅ Clients depend on abstract interfaces rather than concrete classes, reducing coupling.
+"""
+
