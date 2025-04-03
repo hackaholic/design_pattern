@@ -10,3 +10,11 @@ Here’s the list of Structural Patterns:
 6️⃣ Flyweight – Shares objects to reduce memory usage.
 7️⃣ Proxy – Acts as a substitute or intermediary for another object.
 
+🔹 Adapter Pattern:
+The Adapter Pattern allows objects with incompatible interfaces to work together by providing a wrapper that translates one interface into another.
+Think of it like a power plug adapter—it allows a European plug to work with an American socket without modifying the devices themselves.
+
+🔹Bridge Pattern:
+The Bridge Pattern is used when we want to decouple an abstraction from its implementation so that both can evolve independently.
+Bridge is a structural design pattern that divides business logic or huge class into separate class hierarchies that can be developed independently. 
+One of these hierarchies (often called the Abstraction) will get a reference to an object of the second hierarchy (Implementation).
