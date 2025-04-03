@@ -18,3 +18,13 @@ Think of it like a power plug adapter—it allows a European plug to work with a
 The Bridge Pattern is used when we want to decouple an abstraction from its implementation so that both can evolve independently.
 Bridge is a structural design pattern that divides business logic or huge class into separate class hierarchies that can be developed independently. 
 One of these hierarchies (often called the Abstraction) will get a reference to an object of the second hierarchy (Implementation).
+
+🔹 Composite Pattern
+The Composite pattern allows treating individual objects and compositions of objects uniformly. 
+It is useful when dealing with tree structures like file systems, UI components, or organizational hierarchies.
+📌 When to Use?
+
+✅ When objects need to be treated the same way, whether they are single or composed.
+✅ When dealing with hierarchical data (e.g., file system, company structure).
+✅ When you want to avoid if-else checks for distinguishing between individual and group objects.
+
