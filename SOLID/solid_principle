@@ -1,0 +1,160 @@
+SOLID Principles
+
+The SOLID principles are five design principles that help software developers create maintainable, scalable, and flexible systems. These principles improve code quality and reduce tight coupling.
+
+1. Single Responsibility Principle (SRP)
+Definition:
+A class should have only one reason to change, meaning it should have only one responsibility.
+
+Why?
+Improves maintainability.
+Avoids large, monolithic classes.
+Encourages modularity.
+
+Example (Bad - Violating SRP)
+class Report:
+    def generate_report(self):
+        # Generates a report
+        pass
+    
+    def save_to_file(self, filename):
+        # Saves report to a file
+        pass
+
+Here, Report is responsible for both generating the report and saving it to a file. These should be separate responsibilities.
+
+Example (Good - Applying SRP)
+class ReportGenerator:
+    def generate_report(self):
+        pass
+
+class ReportSaver:
+    def save_to_file(self, report, filename):
+        pass
+
+Now, ReportGenerator only generates reports, and ReportSaver handles saving.
+
+2. Open/Closed Principle (OCP)
+Definition:
+Software entities (classes, modules, functions) should be open for extension, but closed for modification.
+
+Why?
+Prevents modifying existing code when adding new functionality.
+Encourages extending behavior via inheritance or interfaces.
+
+Example (Bad - Violating OCP)
+class PaymentProcessor:
+    def pay(self, payment_type):
+        if payment_type == "credit":
+            print("Processing credit card payment")
+        elif payment_type == "paypal":
+            print("Processing PayPal payment")
+
+Example (Good - Applying OCP)
+from abc import ABC, abstractmethod
+class PaymentMethod(ABC):
+    @abstractmethod
+    def pay(self):
+        pass
+class CreditCardPayment(PaymentMethod):
+    def pay(self):
+        print("Processing credit card payment")
+class PayPalPayment(PaymentMethod):
+    def pay(self):
+        print("Processing PayPal payment")
+
+Now, new payment methods can be added without modifying existing code.
+
+3. Liskov Substitution Principle (LSP)
+Definition:
+Subtypes must be replaceable for their base types without altering the correctness of the program.
+
+Why?
+Ensures inheritance is used properly.
+Prevents unexpected behavior when using subclasses.
+
+Example (Bad - Violating LSP)
+class Bird:
+    def fly(self):
+        pass
+
+class Penguin(Bird):
+    def fly(self):
+        raise Exception("Penguins can't fly!")
+
+Example (Good - Applying LSP)
+
+class Bird:
+    pass
+
+class FlyingBird(Bird):
+    def fly(self):
+        pass
+
+class Sparrow(FlyingBird):
+    def fly(self):
+        print("Sparrow flying")
+
+class Penguin(Bird):
+    def swim(self):
+        print("Penguin swimming")
+
+Now, Penguin is a Bird without violating the fly() behavior.
+
+5. Dependency Inversion Principle (DIP)
+Definition:
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+Why?
+Reduces coupling between modules.
+Increases flexibility for future changes.
+
+Example (Bad - Violating DIP)
+class EmailService:
+    def send_email(self, email, message):
+        print(f"Sending email to {email} with message: {message}")
+
+class UserService:
+    def __init__(self):
+        self.email_service = EmailService()
+    
+    def register_user(self, email):
+        self.email_service.send_email(email, "Welcome!")
+
+UserService depends directly on EmailService, making it hard to replace.
+
+Example (Good - Applying DIP)
+from abc import ABC, abstractmethod
+
+class EmailService(ABC):
+    @abstractmethod
+    def send_email(self, email, message):
+        pass
+
+class SMTPService(EmailService):
+    def send_email(self, email, message):
+        print(f"Sending email via SMTP to {email}: {message}")
+
+class UserService:
+    def __init__(self, email_service: EmailService):
+        self.email_service = email_service
+    
+    def register_user(self, email):
+        self.email_service.send_email(email, "Welcome!")
+
+Now UserService depends on EmailService (an abstraction), making it easy to swap implementations.
+
+
+Summary of SOLID Principles
+
+S - Single Responsibility: A class should have only one reason to change.
+
+O - Open/Closed: Open for extension, closed for modification.
+
+L - Liskov Substitution: Subtypes must be replaceable for their base types.
+
+I - Interface Segregation: Don't force a class to implement unused methods.
+
+D - Dependency Inversion: Depend on abstractions, not concrete implementations.
+
+These principles help build scalable, maintainable, and flexible code structures.
