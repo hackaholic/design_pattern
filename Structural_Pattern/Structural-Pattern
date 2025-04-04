@@ -28,3 +28,11 @@ It is useful when dealing with tree structures like file systems, UI components,
 ✅ When dealing with hierarchical data (e.g., file system, company structure).
 ✅ When you want to avoid if-else checks for distinguishing between individual and group objects.
 
+🔹 Decorator Pattern -  Dynamically Extending Behavior
+The Decorator Pattern allows us to dynamically add new behaviors to an object without modifying its structure.
+Why Use the Decorator Pattern?
+    Avoids subclass explosion by allowing flexible behavior extension at runtime.
+    Adheres to the Open-Closed Principle (OCP) – New functionality is added without modifying existing code.
+    Allows multiple independent features to be combined dynamically.
+
+
